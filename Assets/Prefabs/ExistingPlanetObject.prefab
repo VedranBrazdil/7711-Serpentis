@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1858028483498334}
+  m_IsPrefabParent: 1
+--- !u!1 &1858028483498334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4383702790621664}
+  - component: {fileID: 212996339591768396}
+  - component: {fileID: 114385334479948056}
+  - component: {fileID: 58752702066946574}
+  m_Layer: 0
+  m_Name: ExistingPlanetObject
+  m_TagString: ExistingPlanet
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4383702790621664
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858028483498334}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.477, y: 3.972, z: -6}
+  m_LocalScale: {x: 0.23, y: 0.23, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &58752702066946574
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858028483498334}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.5
+--- !u!114 &114385334479948056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858028483498334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03b52b0b5c68934688db3317ed95d3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlanetImages:
+  - {fileID: 21300000, guid: 5030f90b468f43442a3b06c7e19603b9, type: 3}
+  - {fileID: 21300000, guid: d82aecd8632d73e4e9f9131d4c434be7, type: 3}
+  - {fileID: 21300000, guid: 1d9c230fc0ab9d8458e9dbba6ef62266, type: 3}
+  - {fileID: 21300000, guid: 86010feca79b31f4cb820bc23f046fc3, type: 3}
+  - {fileID: 21300000, guid: 31a21f1405e44a4489fb961ad8187512, type: 3}
+  - {fileID: 21300000, guid: 3cf6414d599c34447bb8e8943a2318db, type: 3}
+  - {fileID: 21300000, guid: 9c86fbaee9f897b408919390b1d8261e, type: 3}
+  - {fileID: 21300000, guid: e07b7e0cc7362b34a9f284c4614ee2f2, type: 3}
+  - {fileID: 21300000, guid: 1a019dac5e2804143a05053076e22b49, type: 3}
+  - {fileID: 21300000, guid: fc3a3b8a27ac0f849a95b9d994f9b2e3, type: 3}
+  - {fileID: 21300000, guid: 9a6a1bdabac109947aa752f5b4c46504, type: 3}
+  - {fileID: 21300000, guid: b754689ca6e724e4ba4330da7ba2d6aa, type: 3}
+  - {fileID: 21300000, guid: 9e7edda85fe5da547919aa4c306e66c2, type: 3}
+  - {fileID: 21300000, guid: d72a323744d9856419bd8dfc1a6d1a69, type: 3}
+  - {fileID: 21300000, guid: d06b29eb7617d0e42a1ad861869bb326, type: 3}
+  - {fileID: 21300000, guid: 4b6a23353c4aaca40864e15a90716948, type: 3}
+  - {fileID: 21300000, guid: 73c8bbebcdab45b4bb1ec51cddc5b1bc, type: 3}
+  - {fileID: 21300000, guid: 7613702e7aaa49d48973dd288506e291, type: 3}
+  - {fileID: 21300000, guid: c271c022489a87c4ba803aafa09ab781, type: 3}
+  - {fileID: 21300000, guid: 610c0fd76f0c51c40811e0401ff5bd9e, type: 3}
+  - {fileID: 21300000, guid: b4ae539b6b50abc43a46f705391655a4, type: 3}
+  - {fileID: 21300000, guid: 499b58f611102224c8a41198fcd58c05, type: 3}
+  - {fileID: 21300000, guid: 211857158ef427740856ebbce2a7ff42, type: 3}
+  - {fileID: 21300000, guid: b2e7a46b2a6943948a8e0400515661ea, type: 3}
+  - {fileID: 21300000, guid: fb7678af6b5ece0438e1885f8cdc684f, type: 3}
+  - {fileID: 21300000, guid: d1cd1f041fdc48342a6c97a647035ffe, type: 3}
+  - {fileID: 21300000, guid: 2f9e9ed7db105914ab17a5d6c2e5575d, type: 3}
+  - {fileID: 21300000, guid: 296df69ad9dfc55498e1c92cb587e41b, type: 3}
+  - {fileID: 21300000, guid: 3c7efb2022c69184986b49ace13ab09c, type: 3}
+  - {fileID: 21300000, guid: fcd5cab9c9495944c966400f2320072c, type: 3}
+--- !u!212 &212996339591768396
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1858028483498334}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4b6a23353c4aaca40864e15a90716948, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5, y: 5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
