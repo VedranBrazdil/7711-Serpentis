@@ -46,9 +46,6 @@ public class ButtonPlanetBuildShip : MonoBehaviour {
     void OnMouseDown(){
         if(clickable){
             selectedPlanet.BuildShipHere();
-            ownerPlayer.PayForShip();
-            ownerPlayer.ActionDone();
-            ownerPlayer.IBuiltShip();
         }
         Debug.Log("ButtonClicked");
     }

@@ -200,10 +200,16 @@ public class SinglePlanet : MonoBehaviour {
 
     public void BuildShipHere(){
         //CreatedShuttle = Instantiate(prefabShuttle, new Vector3(i * 2.0F, 0, 0), Quaternion.identity);
+        ThisPlayerIsOwner.PayForShip();
+        ThisPlayerIsOwner.ActionDone();
+        ThisPlayerIsOwner.IBuiltShip();
+
         CreatedShuttle = Instantiate<Shuttle>(prefabShuttle);
-        CreatedShuttle.SetMyPlayer(ThisPlayerIsOwner); 
-        CreatedShuttle.SetPositionOfShuttle(positionOfThisPlanet);
-        CreatedShuttle.SetLocationOfShuttle(PlanetID);
+        CreatedShuttle.SetupThisShuttle(PlanetID[0], PlanetID[1], ThisPlayerIsOwner);
+
+        //CreatedShuttle.SetMyPlayer(ThisPlayerIsOwner); 
+        //CreatedShuttle.SetPositionOfShuttle(positionOfThisPlanet);
+        //CreatedShuttle.SetLocationOfShuttle(PlanetID);
     }
 
     // SET RESOURCES OF PLANET ****************************************************************************************************

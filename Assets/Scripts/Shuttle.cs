@@ -6,6 +6,7 @@ public class Shuttle : MonoBehaviour {
 
     // About Player
     int PlayerID = 0;
+    int ShipID = 0;
     SinglePlayer ThisPlayer;
     SinglePlayer[] ListOfPlayers;
     Shuttle[] SelectedShuttles;
@@ -45,17 +46,23 @@ public class Shuttle : MonoBehaviour {
     public HUDControler HUDMaster;
 
     void Start () {
-        btnMove = GameObject.FindObjectOfType<ButtonShuttleTravel>();
-        btnMoveGO = GameObject.Find("ButtonShuttleTravel");
-        btnAction1 = GameObject.FindObjectOfType<ButtonShuttleAction1>();
-        btnAction1GO = GameObject.Find("ButtonShuttleAction1");
-        btnAction2 = GameObject.FindObjectOfType<ButtonShuttleAction2>();
-        btnAction2GO = GameObject.Find("ButtonShuttleAction2");
+
+        if (PlanetsInfo == null) PlanetsInfo = GameObject.FindObjectOfType<Planets>();
+        if (HUDMaster == null) HUDMaster = GameObject.FindObjectOfType<HUDControler>();
+
+        btnMove = HUDMaster.GetBtnMove();
+        btnMoveGO = HUDMaster.GetBtnMoveGO();
+        btnAction1 = HUDMaster.GetBtnAction1();
+        btnAction1GO = HUDMaster.GetBtnAction1GO();
+        btnAction2 = HUDMaster.GetBtnAction2();
+        btnAction2GO = HUDMaster.GetBtnAction2GO();
     }
 
     public void SetupThisShuttle(int homeOrbit, int homePlanet, SinglePlayer plID){
-        PlanetsInfo = GameObject.FindObjectOfType<Planets>();
-        HUDMaster = GameObject.FindObjectOfType<HUDControler>();
+        //Function goes faster than Start...
+        if (PlanetsInfo == null) PlanetsInfo = GameObject.FindObjectOfType<Planets>();
+        if (HUDMaster == null) HUDMaster = GameObject.FindObjectOfType<HUDControler>();
+
         ShuttleLocation[0] = homeOrbit;
         ShuttleLocation[1] = homePlanet;
         //PlayerID = plID;
@@ -72,7 +79,10 @@ public class Shuttle : MonoBehaviour {
         Debug.Log("ThisPlayer set: " + ThisPlayer.name);
 
         this.PortShuttleOnThisPosition(PlanetsInfo.GetPositionOfPlanet(ShuttleLocation[0], ShuttleLocation[1]));
+
         Debug.Log("New location of Shuttle: " + shuttlePosition);
+
+        ShipID = ThisPlayer.GetShipsNum();
     }
     
     // Update is called once per frame
@@ -190,11 +200,11 @@ public class Shuttle : MonoBehaviour {
     // CHANGE LOCATION OF SHIP ********************************************************************************************
     //
     public void SetPositionOfShuttle(Vector3 newPosition){
-        targetPosition = new Vector3((newPosition.x + 0.3f), (newPosition.y - 0.3f), ZpositionOfShuttle);
+        targetPosition = new Vector3((newPosition.x + 0.3f + ((float)ShipID*2/10)), (newPosition.y - 0.3f - ((float)ShipID*2/10)), ZpositionOfShuttle);
     }
     public void PortShuttleOnThisPosition(Vector3 newPosition){
-        targetPosition = new Vector3((newPosition.x + 0.3f), (newPosition.y - 0.3f), ZpositionOfShuttle);
-        transform.position = new Vector3((newPosition.x + 0.3f), (newPosition.y - 0.3f), ZpositionOfShuttle);
+        targetPosition = new Vector3((newPosition.x + 0.3f + ((float)ShipID*2/10)), (newPosition.y - 0.3f - ((float)ShipID*2/10)), ZpositionOfShuttle);
+        transform.position = new Vector3((newPosition.x + 0.3f + ((float)ShipID*2/10)), (newPosition.y - 0.3f - ((float)ShipID*2/10)), ZpositionOfShuttle);
         shuttlePosition = this.transform.position;
     }
     public Vector3 GetPositionOfShuttle(){   

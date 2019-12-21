@@ -49,10 +49,26 @@ public class HUDControler : MonoBehaviour {
 
     bool flagPlayerIsSelected = false;
 
+    //References
+    public ButtonShuttleTravel btnMove;
+    public GameObject btnMoveGO;
+    public ButtonShuttleAction1 btnAction1;
+    public GameObject btnAction1GO;
+    public ButtonShuttleAction2 btnAction2;
+    public GameObject btnAction2GO;
+
 
 
     // Use this for initialization
     void Start () {
+        //Save References
+        btnMove = GameObject.FindObjectOfType<ButtonShuttleTravel>();
+        btnMoveGO = GameObject.Find("ButtonShuttleTravel");
+        btnAction1 = GameObject.FindObjectOfType<ButtonShuttleAction1>();
+        btnAction1GO = GameObject.Find("ButtonShuttleAction1");
+        btnAction2 = GameObject.FindObjectOfType<ButtonShuttleAction2>();
+        btnAction2GO = GameObject.Find("ButtonShuttleAction2");
+
         //Botom Left HUD
         hudBotLeft.enabled = true;
         hudBotLeftResources.enabled = false;
@@ -164,5 +180,25 @@ public class HUDControler : MonoBehaviour {
         hudBRAction1.sprite = ResourcesImages[arrTypeOfResourceGain[0]];
         hudBRAction2.sprite = ResourcesImages[arrTypeOfResourceGain[1]];
         hudBRCost2.sprite = ResourcesImages[arrTypeOfResourceCost[1]];
+    }
+
+    //Return References
+    public ButtonShuttleTravel GetBtnMove(){
+        return btnMove;
+    }
+    public GameObject GetBtnMoveGO(){
+        return btnMoveGO;
+    }
+    public ButtonShuttleAction1 GetBtnAction1(){
+        return btnAction1;
+    }
+    public GameObject GetBtnAction1GO(){
+        return btnAction1GO;
+    }
+    public ButtonShuttleAction2 GetBtnAction2(){
+        return btnAction2;
+    }
+    public GameObject GetBtnAction2GO(){
+        return btnAction2GO;
     }
 }

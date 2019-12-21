@@ -138,4 +138,7 @@ public class SinglePlayer : MonoBehaviour {
     public void IBuiltShip(){
         shipNum ++;
     }
+    public int GetShipsNum(){
+        return shipNum;
+    }
 }
