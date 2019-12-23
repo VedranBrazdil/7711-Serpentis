@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Planets : MonoBehaviour {
 
@@ -39,6 +40,10 @@ public class Planets : MonoBehaviour {
     //Discovering
     int discoverNum;
     int discoverFail;
+
+    //mouseover text
+    public Text mouseOverTxtPlanet;
+    public Text mouseOverTxtShip;
 
     // Use this for initialization
     void Start () {
@@ -159,6 +164,7 @@ public class Planets : MonoBehaviour {
     }
 
     public void RoundDone() {
+
         //arrListOfPlanets update
         //arrPlanetPosition NOT UPDATED but location of each planet is
         // each arrListOfPlanets[].SetMyID(1,0) NEW ID
@@ -276,6 +282,14 @@ public class Planets : MonoBehaviour {
         // only one is enaugh to turn off Buttons
         listOfShuttles[0].TurnOffButtonsOfShuttle();
         arrListOfPlanets[0,0].TurnOffButtonsOfPlanet();
+
+        //mouseover Cleanup
+        this.TextRemoval();
+    }
+
+    void TextRemoval(){
+        mouseOverTxtPlanet.text = "";
+        mouseOverTxtShip.text = "";
     }
 
     // DISCOVERING

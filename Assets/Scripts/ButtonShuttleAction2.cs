@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonShuttleAction2 : MonoBehaviour {
 
@@ -22,6 +23,10 @@ public class ButtonShuttleAction2 : MonoBehaviour {
 
     int[] arrTypeOfCost;
     int[] arrCost;
+
+    //mouseover text
+    public Text mouseOverTxt;
+    Vector3 mousePos;
 
     // Use this for initialization
     void Start () {
@@ -70,5 +75,23 @@ public class ButtonShuttleAction2 : MonoBehaviour {
             }
         }
         //Debug.Log("ButtonClicked");
+    }
+
+
+    //mouseover text
+    void OnMouseOver()
+    {
+        mouseOverTxt.text = "Trade action (Costs)";
+        mousePos = Input.mousePosition;
+        mouseOverTxt.transform.position = mousePos;
+    }
+
+    void TextRemoval(){
+        mouseOverTxt.text = "";
+    }
+
+    void OnMouseExit()
+    {
+        this.TextRemoval();
     }
 }

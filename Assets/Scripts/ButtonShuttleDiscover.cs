@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class ButtonShuttleDiscover : MonoBehaviour {
 
     Shuttle discoverFromThisShuttle;
@@ -19,6 +18,10 @@ public class ButtonShuttleDiscover : MonoBehaviour {
     //public Transform btnDiscoverGO;
 
     public Sprite[] ButtonImages;
+
+    //mouseover text
+    public Text mouseOverTxt;
+    Vector3 mousePos;
 
     // Use this for initialization
     void Start () {
@@ -65,5 +68,23 @@ public class ButtonShuttleDiscover : MonoBehaviour {
             discoverFromThisShuttle.ThisShuttlesActionIsDone();
             selectedPlanet.DiscoverOnThisPlanet(discoverFromThisShuttle);
         }
+    }
+
+
+    //mouseover text
+    void OnMouseOver()
+    {
+        mouseOverTxt.text = "    Discover";
+        mousePos = Input.mousePosition;
+        mouseOverTxt.transform.position = mousePos;
+    }
+
+    void TextRemoval(){
+        mouseOverTxt.text = "";
+    }
+
+    void OnMouseExit()
+    {
+        this.TextRemoval();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonShuttleAction1 : MonoBehaviour {
 
@@ -17,6 +18,10 @@ public class ButtonShuttleAction1 : MonoBehaviour {
     bool actionDone = false;
 
     public Sprite[] ButtonImages;
+
+    //mouseover text
+    public Text mouseOverTxt;
+    Vector3 mousePos;
 
     // Use this for initialization
     void Start () {
@@ -61,4 +66,22 @@ public class ButtonShuttleAction1 : MonoBehaviour {
         }
         //Debug.Log("ButtonClicked");
     }
+
+    //mouseover text
+    void OnMouseOver()
+    {
+        mouseOverTxt.text = "Gain action (Free)";
+        mousePos = Input.mousePosition;
+        mouseOverTxt.transform.position = mousePos;
+    }
+
+    void TextRemoval(){
+        mouseOverTxt.text = "";
+    }
+
+    void OnMouseExit()
+    {
+        this.TextRemoval();
+    }
+
 }

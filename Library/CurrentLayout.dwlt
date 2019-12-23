@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 342}
   m_MaxSize: {x: 8004, y: 8042}
   vertical: 1
-  controlID: 72
+  controlID: 10
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 52
+  controlID: 11
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -367,8 +367,8 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0a2b0000
-    m_LastClickedID: 11018
+    m_SelectedIDs: 862a0000
+    m_LastClickedID: 10886
     m_ExpandedIDs: 9efbffff00000000862a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -420,14 +420,14 @@ MonoBehaviour:
     height: 650
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 0
-  lastFramingTime: 3774.982167241844
+  lastFramingTime: 4838.87990259096
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -7.6654077, y: 31.638859, z: -3.5068543}
+    m_Target: {x: 543, y: 316.5, z: 0}
     speed: 2
-    m_Value: {x: -7.6654077, y: 31.638859, z: -3.5068543}
+    m_Value: {x: 543, y: 316.5, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -455,9 +455,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.6097075
+    m_Target: 268.60056
     speed: 2
-    m_Value: 1.6097075
+    m_Value: 268.60056
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -535,18 +535,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 75
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: 75
   m_LastProjectPath: C:\Users\GospodinVedran\Desktop\SapeisBoisProjekt\SpeisBoisGit
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e2270000
-    m_LastClickedID: 10210
+    m_SelectedIDs: 80270000
+    m_LastClickedID: 10112
     m_ExpandedIDs: 00000000802700002c29000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 20250000822b0000862b000000000000ec280000
+    m_ExpandedInstanceIDs: 20250000822b0000862b0000ec28000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

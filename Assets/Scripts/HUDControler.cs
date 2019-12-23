@@ -62,12 +62,12 @@ public class HUDControler : MonoBehaviour {
     // Use this for initialization
     void Start () {
         //Save References
-        btnMove = GameObject.FindObjectOfType<ButtonShuttleTravel>();
-        btnMoveGO = GameObject.Find("ButtonShuttleTravel");
-        btnAction1 = GameObject.FindObjectOfType<ButtonShuttleAction1>();
-        btnAction1GO = GameObject.Find("ButtonShuttleAction1");
-        btnAction2 = GameObject.FindObjectOfType<ButtonShuttleAction2>();
-        btnAction2GO = GameObject.Find("ButtonShuttleAction2");
+        //btnMove = GameObject.FindObjectOfType<ButtonShuttleTravel>();
+        //btnMoveGO = GameObject.Find("ButtonShuttleTravel");
+        //btnAction1 = GameObject.FindObjectOfType<ButtonShuttleAction1>();
+        //btnAction1GO = GameObject.Find("ButtonShuttleAction1");
+        //btnAction2 = GameObject.FindObjectOfType<ButtonShuttleAction2>();
+        //btnAction2GO = GameObject.Find("ButtonShuttleAction2");
 
         //Botom Left HUD
         hudBotLeft.enabled = true;

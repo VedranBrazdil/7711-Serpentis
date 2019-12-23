@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonPlanetTravel : MonoBehaviour {
 
@@ -16,6 +17,10 @@ public class ButtonPlanetTravel : MonoBehaviour {
     int[] locationOfShuttle;
 
     public Sprite[] ButtonImages;
+
+    //mouseover
+    public Text mouseOverTxt;
+    Vector3 mousePos;
 
 
     // Use this for initialization
@@ -59,6 +64,25 @@ public class ButtonPlanetTravel : MonoBehaviour {
     void OnMouseDown(){
         if (clickable){
             selectedPlanet.MoveShipHere(selectedShuttle);
+            this.TextRemoval();
         }
+    }
+
+
+    //mouseover text
+    void OnMouseOver()
+    {
+        mouseOverTxt.text = "Travel Here";
+        mousePos = Input.mousePosition;
+        mouseOverTxt.transform.position = mousePos;
+    }
+
+    void TextRemoval(){
+        mouseOverTxt.text = "";
+    }
+
+    void OnMouseExit()
+    {
+        this.TextRemoval();
     }
 }
